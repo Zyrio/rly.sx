@@ -4,7 +4,7 @@
     <AssemblyName>Sexy</AssemblyName>
     <PackageId>sexy</PackageId>
     <TargetFramework>netcoreapp1.1</TargetFramework>
-    <VersionPrefix>17.01.2</VersionPrefix>
+    <VersionPrefix>17.01.3</VersionPrefix>
   </PropertyGroup>
 
 
