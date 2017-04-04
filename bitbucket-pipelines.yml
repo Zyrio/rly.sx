@@ -1,0 +1,16 @@
+image: microsoft/dotnet:onbuild
+
+pipelines:
+  branches:
+    master:
+      - step:
+          script:
+            - chmod -x build/deploy.ci.sh
+            - chmod -x build/build.application.sh
+            - bash build/deploy.ci.sh
+            - bash build/build.application.sh
+    release/live:
+      - step:
+          script:
+            - chmod -x build/deploy.live.sh
+            - bash build/deploy.live.sh
