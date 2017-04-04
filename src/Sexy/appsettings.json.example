@@ -3,6 +3,7 @@
     "FilenameLength": "8",
     "InstanceName": "rly.sx",
     "InstanceProtocol": "https",
+    "MaxFilesize": "128000000",
     "UploadStorageEndpoint": "//u.rly.sx/",
     "UploadStoragePath": "C:\\Dev\\"
   },
