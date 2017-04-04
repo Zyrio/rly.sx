@@ -38,7 +38,7 @@ namespace Sexy.Controllers
             {
                 if (file.Length > 0)
                 {
-                    if(file.Length > maxFilesize) {
+                    if(file.Length < maxFilesize) {
                         newFile = randomString + Path.GetExtension(file.FileName);
 
                         using (var fileStream = new FileStream(
