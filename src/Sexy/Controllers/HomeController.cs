@@ -28,6 +28,7 @@ namespace Sexy.Controllers
         {
             var uploads = Sexy.Data.Constants.AppSettings.UploadStoragePath;
             var filenameLength = Convert.ToInt32(Sexy.Data.Constants.AppSettings.FilenameLength);
+            var maxFilesize = Convert.ToInt32(Sexy.Data.Constants.AppSettings.MaxFilesize);
 
             var randomString = CreateFilename(filenameLength);
 
@@ -37,13 +38,15 @@ namespace Sexy.Controllers
             {
                 if (file.Length > 0)
                 {
-                    newFile = randomString + Path.GetExtension(file.FileName);
+                    if(file.Length > maxFilesize) {
+                        newFile = randomString + Path.GetExtension(file.FileName);
 
-                    using (var fileStream = new FileStream(
-                        Path.Combine(uploads, newFile), FileMode.Create)
-                    )
-                    {
-                        await file.CopyToAsync(fileStream);
+                        using (var fileStream = new FileStream(
+                            Path.Combine(uploads, newFile), FileMode.Create)
+                        )
+                        {
+                            await file.CopyToAsync(fileStream);
+                        }
                     }
                 }
             }

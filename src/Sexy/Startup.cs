@@ -34,6 +34,7 @@ namespace Sexy
             Sexy.Data.Constants.AppSettings.FilenameLength = Configuration.GetSection("AppSettings").GetSection("FilenameLength").Value;
             Sexy.Data.Constants.AppSettings.InstanceName = Configuration.GetSection("AppSettings").GetSection("InstanceName").Value;
             Sexy.Data.Constants.AppSettings.InstanceProtocol = Configuration.GetSection("AppSettings").GetSection("InstanceProtocol").Value;
+            Sexy.Data.Constants.AppSettings.MaxFilesize = Configuration.GetSection("AppSettings").GetSection("MaxFilesize").Value;
             Sexy.Data.Constants.AppSettings.UploadStorageEndpoint = Configuration.GetSection("AppSettings").GetSection("UploadStorageEndpoint").Value;
             Sexy.Data.Constants.AppSettings.UploadStoragePath = Configuration.GetSection("AppSettings").GetSection("UploadStoragePath").Value;
         }
