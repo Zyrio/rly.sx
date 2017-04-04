@@ -65,11 +65,6 @@ ssh -o StrictHostKeyChecking=no ${!SSHUSER}@${!SSHSERVER} /bin/bash << EOF
     sudo bash ${LOCATION}build/build.application.sh
 
     echo " "
-    echo "build database"
-    echo "--------------"
-    sudo bash ${LOCATION}build/build.database.sh
-
-    echo " "
     echo "configure application"
     echo "---------------------"
     sudo cp ${LOCATION}build/conf.systemd.txt /etc/systemd/system/${SERVICE}.service
