@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 
 namespace Sexy.Models.HomeViewModels
 {

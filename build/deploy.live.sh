@@ -60,6 +60,11 @@ ssh -o StrictHostKeyChecking=no ${!SSHUSER}@${!SSHSERVER} /bin/bash << EOF
     sudo chmod -x ${LOCATION}build/build.application.sh
 
     echo " "
+    echo "stop service"
+    echo "---------------"
+    sudo systemctl stop ${SERVICE}
+
+    echo " "
     echo "build application"
     echo "-----------------"
     sudo bash ${LOCATION}build/build.application.sh
@@ -70,10 +75,9 @@ ssh -o StrictHostKeyChecking=no ${!SSHUSER}@${!SSHSERVER} /bin/bash << EOF
     sudo cp ${LOCATION}build/conf.systemd.txt /etc/systemd/system/${SERVICE}.service
 
     echo " "
-    echo "restart service"
+    echo "start service"
     echo "---------------"
     sudo systemctl daemon-reload
-    sudo systemctl stop ${SERVICE}
     sudo systemctl start ${SERVICE}
     sleep 10
 
