@@ -1,0 +1,12 @@
+
+namespace Sexy.Data.Constants
+{
+    public class AppSettings
+    {
+        public static string FilenameLength { get; set; }
+        public static string InstanceName { get; set; }
+        public static string InstanceProtocol { get; set; }
+        public static string UploadStorageEndpoint { get; set; }
+        public static string UploadStoragePath { get; set; }
+    }
+}

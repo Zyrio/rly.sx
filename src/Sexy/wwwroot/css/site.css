@@ -1,0 +1,324 @@
+﻿body {
+    background-color: #121212;
+    font-family: 'Oxygen', sans-serif;
+}
+
+/* CSS Tables */
+.table {
+    display: table;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    display: table-cell;
+}
+
+a {
+    color: inherit;
+    border-bottom: 1px solid #F1407B;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+    border-bottom: 1px solid #40F1B6;
+}
+
+a.strong {
+    color: #F1407B;
+    border-bottom: 0;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a.strong:hover {
+    color: #40F1B6;
+    border-bottom: 0;
+}
+
+.minor {
+    opacity: 0.7;
+}
+
+#footlogo {
+    border-bottom: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 400;
+}
+
+#gaffa {
+    display: table;
+    width: 100%;
+    height: 100%; /* For at least Firefox */
+    min-height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+#gaffa-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#upload-panel {
+    font-size: 60px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
+#upload-result {
+    color: #CCCCCC;
+    font-weight: 700;
+    margin-top: 30px;
+    font-size: 18px;
+    height: 60px;
+}
+
+    #upload-result > a {
+        font-size: 22px;
+        margin-top: 5px;
+        padding-bottom: 3px;
+    }
+
+#upload-panel-padding {
+    margin-bottom: 30px;
+    height: 60px;
+}
+
+.big {
+    display: inline;
+    text-transform: uppercase;
+}
+
+#gotfiles {
+    color: #D6D6D6;
+}
+
+#upload {
+    color: #303030;
+    background-color: #F1407B;
+    padding: 7px 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+    #upload:hover {
+        background-color: #40F1B6;
+    }
+
+#upload-hidden {
+    display: none;
+}
+
+#footer-container {
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+    right: 0;
+    left: 0;
+}
+
+#footer {
+    margin: 0 auto;
+    background-color: #303030;
+    font-size: 20px;
+    text-align: left;
+    overflow: hidden;
+    display: block;
+    display: table;
+    width: auto;
+}
+
+    #footer > #logo {
+        color: #111111;
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        background-color: #BD3562;
+        display: table-cell;
+        text-align: center;
+        padding: 5px 12px;
+        width: auto;
+        transition: 0.5s;
+    }
+
+        #footer > #logo > a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 0;
+        }
+
+        #footer > #logo > a:hover {
+            color: #E3E3E3;
+        }
+
+        #footer > nav {
+            display: table-cell;
+            text-align: center;
+            padding: 5px 12px;
+            color: #BFBFBF;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 400;
+        }
+
+            #footer > nav > ul {
+                list-style: outside none none;
+                margin: 0px;
+                padding: 0px;
+                text-align: center;
+            }
+
+                #footer > nav > ul > li {
+                    display: inline-block;
+                    margin: 0px;
+                    padding: 0px;
+                }
+
+                #footer > nav > ul > li::after {
+                    content: "|";
+                    margin: 0px 10px;
+                    opacity: 0.3;
+                }
+
+                #footer > nav > ul > li:last-child::after {
+                    content: "";
+                    margin: 0;
+                }
+
+                    #footer > nav > ul > li > a {
+                        color: inherit;
+                        text-decoration: none;
+                        transition: 0.5s;
+                        border-bottom: 0;
+                    }
+
+                    #footer > nav > ul > li > a:hover {
+                        color: #40F1B6;
+                    }
+
+#error {
+    position: absolute; width: 100%; top: 0;
+}
+
+#error-inner {
+    padding: 0 10px;
+}
+
+.alert {
+    max-width: 800px;
+    margin: 10px auto 0 auto;
+    border: 1px #F1407B solid;
+    text-align: left;
+    color: white;
+    background-color: #1F1F1F;
+    padding: 5px 25px 5px 5px;
+    font-size: 14px;
+}
+
+.alert-close {
+    float: right;
+    background-color: #91294C;
+    margin: -5px -25px -5px -5px;
+    padding: 5px;
+    font-weight: 700;
+    width: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#nav-container {
+    background-color: #303030;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#nav {
+    width: 850px;
+    margin: 0 auto;
+}
+
+    #nav > #logo {
+        color: #111111;
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        background-color: #BD3562;
+        display: inline-block;
+        text-align: center;
+        padding: 5px 12px;
+        margin-right: 12px;
+        width: auto;
+        float: left;
+        transition: 0.5s;
+    }
+
+        #nav > #logo > a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 0;
+        }
+
+            #nav > #logo > a:hover {
+                color: #E3E3E3;
+            }
+
+    #nav > nav {
+        text-align: left;
+        padding: 5px 12px 5px 0;
+        color: #BFBFBF;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 400;
+    }
+
+        #nav > nav > ul {
+            list-style: outside none none;
+            margin: 0px;
+            padding: 0px;
+            text-align: left;
+        }
+
+            #nav > nav > ul > li {
+                display: inline-block;
+                margin: 0px;
+                padding: 0px;
+            }
+
+                #nav > nav > ul > li::after {
+                    content: "|";
+                    margin: 0px 10px;
+                    opacity: 0.3;
+                }
+
+                #nav > nav > ul > li:last-child::after {
+                    content: "";
+                    margin: 0;
+                }
+
+                #nav > nav > ul > li > a {
+                    color: inherit;
+                    text-decoration: none;
+                    transition: 0.5s;
+                    border-bottom: 0;
+                }
+
+                    #nav > nav > ul > li > a:hover {
+                        color: #40F1B6;
+                    }

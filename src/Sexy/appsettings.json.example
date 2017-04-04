@@ -1,0 +1,15 @@
+﻿{
+  "AppSettings": {
+    "FilenameLength": "8",
+    "InstanceName": "rly.sx",
+    "InstanceProtocol": "https",
+    "UploadStorageEndpoint": "//u.rly.sx/",
+    "UploadStoragePath": "C:\\Dev\\"
+  },
+  "Logging": {
+    "IncludeScopes": false,
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  }
+}

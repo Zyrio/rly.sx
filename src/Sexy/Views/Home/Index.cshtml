@@ -1,0 +1,85 @@
+﻿@model Sexy.Models.HomeViewModels.IndexViewModel
+
+@{
+    Layout = "_BlankLayout";
+}
+
+<html>
+<head>
+    <title>@Sexy.Data.Constants.AppSettings.InstanceName</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link href="/css/site.css" rel="stylesheet" type="text/css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div id="gaffa">
+        <div id="gaffa-inner">
+            <div id="upload-panel-padding">
+            </div>
+
+            <div id="upload-panel">
+                <div id="gotfiles" class="big">Got Files?</div>
+                <div id="upload" class="big">Upload</div>
+            </div>
+
+            <div id="upload-result">
+                @if(!String.IsNullOrEmpty(@Model.Filename)) {
+                    var link = @Sexy.Data.Constants.AppSettings.InstanceProtocol + ":" +
+                        @Sexy.Data.Constants.AppSettings.UploadStorageEndpoint +
+                        @Model.Filename;
+                    
+                    <text>
+                        Your file can be found at:<br />
+                        <a href="@link">
+                            @link
+                        </a>
+                    </text>
+                }
+            </div>
+
+            <div id="upload-hidden">
+                <form action="/" method="post" enctype="multipart/form-data">
+                    <input type="file" name="files" id="files" multiple="multiple" />
+                    <input type="submit" id="file-submit" />
+                </form>
+            </div>
+
+            @*<div id="footer-container" style="">
+                <div id="footer">
+                    <div id="logo">
+                        <a href="/">
+                            rly.sx
+                        </a>
+                    </div>
+                    <!--<div id="misc">
+                        <a href="#"><i class="fa fa-bars"></i></a>
+                    </div>-->
+                    <nav>
+                        <ul>
+                            <li><a href="/">Upload</a></li><!--
+                            --><li><a href="/retro">Retro</a></li><!--
+                            --><li><a href="http://znc.rly.sx/">ZNC</a></li><!--
+                            --><li><a href="http://tpb.rly.sx/">TPB</a></li><!--
+                            --><li><a href="http://kat.rly.sx/">KAT</a></li><!--
+                            <li><a href="irc://irc.b0rked.me/#sexy">IRC</a></li>
+                            TODO: Use less shit method to get rid of spaces betw
+                            --><li><a href="/about">About</a></li>
+                        </ul>
+                        <!-- een LIs.
+                        -->
+                    </nav>
+                </div>
+            </div>*@
+        </div>
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="/js/upload.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+[Unit]
+Description=ASP.NET Core Server for Sexy
+After=network.target
+
+[Service]
+Type=simple
+Environment=ASPNETCORE_ENVIRONMENT=Production
+WorkingDirectory=/web/app/Sexy/src/Sexy/
+ExecStart=/usr/share/dotnet/dotnet /web/app/Sexy/src/Sexy/bin/Debug/netcoreapp1.1/Sexy.dll 5069
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
