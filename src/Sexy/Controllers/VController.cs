@@ -46,15 +46,22 @@ namespace Sexy.Controllers
                     ViewBag.JavaClass = fileName.Substring(fileName.Length -3);
                     fileType = "java";
                     break;
-                case "avi":
-                case "flv":
-                case "wmv":
-                    fileType = "native";
+                    break;
+                case "pdf":
+                    fileType = "document";
+                    break;
+                case "md":
+                    fileType = "markdown";
                     break;
                 case "html":
                 case "htm":
                 case "txt":
                     fileType = "frame";
+                    break;
+                case "avi":
+                case "flv":
+                case "wmv":
+                    fileType = "native";
                     break;
                 case "apk":
                     fileType = "android";
