@@ -12,6 +12,7 @@ namespace Sexy.Data
         }
 
         public DbSet<File> Files { get; set; }
+        public DbSet<FileMeta> FileMetas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
