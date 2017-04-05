@@ -34,15 +34,14 @@ namespace Sexy.Data.Repositories
                 Source = source
             };
 
-            //var newFile = _dbContext
-            //    .Files
-            //    .Add(file)
-            //    .Entity;
-//
-  //          await _dbContext.SaveChangesAsync();
-//
-  //          return newFile;
-            return null;
+            var newFile = _dbContext
+                .Files
+                .Add(file)
+                .Entity;
+
+            await _dbContext.SaveChangesAsync();
+
+            return newFile;
         }
     }
 }
