@@ -1,6 +1,6 @@
 ﻿{
   "ConnectionStrings": {
-   "DefaultConnection": "Server=tcp:zenvo.at.zyr.io,1433;Database=sexy_dev;User ID=UsernameGoesHere;Password=PasswordGoesHere;Encrypt=False;TrustServerCertificate=True;Connection Timeout=30;",
+   "DefaultConnection": "Server=tcp:zenvo.at.zyr.io,1433;Database=sexy_dev;User ID=UsernameGoesHere;Password=PasswordGoesHere;Encrypt=False;TrustServerCertificate=True;Connection Timeout=30;"
   },
   "AppSettings": {
     "FilenameLength": "8",
