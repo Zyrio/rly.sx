@@ -5,6 +5,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Sexy.Data;
+using Sexy.Data.Repositories;
+using Sexy.Data.Repositories.Interfaces;
 
 namespace Sexy
 {
@@ -15,7 +17,6 @@ namespace Sexy
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
         }
@@ -38,9 +39,10 @@ namespace Sexy
         
             // Services
             services.AddMvc();
+            services.AddOptions();
 
             // DI
-            // ...
+            services.AddTransient<IFileRepository, FileRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
