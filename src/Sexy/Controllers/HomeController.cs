@@ -44,7 +44,7 @@ namespace Sexy.Controllers
             var filenameLength = Convert.ToInt32(Sexy.Data.Constants.AppSettings.FilenameLength);
             var maxFilesize = Convert.ToInt32(Sexy.Data.Constants.AppSettings.MaxFilesize);
 
-            var randomString = CreateFilename(filenameLength);
+            var randomString = GenerationUtilities.GenerateRandomString(filenameLength, false);
 
             string newFile = null;
 
@@ -89,22 +89,6 @@ namespace Sexy.Controllers
         public IActionResult Error()
         {
             return View();
-        }
-
-        //
-
-        public string CreateFilename(int length)
-        {
-            const string valid = "abcdefghijklmnopqrstuvwxyz1234567890";
-            System.Text.StringBuilder randomString = new System.Text.StringBuilder();
-            Random random = new Random();
-
-            while (0 < length--)
-            {
-                randomString.Append(valid[random.Next(valid.Length)]);
-            }
-
-            return randomString.ToString();
         }
     }
 }
