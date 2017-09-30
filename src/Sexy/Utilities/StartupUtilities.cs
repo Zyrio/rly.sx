@@ -66,12 +66,12 @@ namespace Sexy.Utilities
             Console.ResetColor();
 
             Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.WriteLine("---------------------------" + Environment.NewLine);
+            Console.WriteLine("-----------------------" + Environment.NewLine);
             Console.ResetColor();
 
             Console.WriteLine("Release " + Release + Environment.NewLine);
 
-            Console.WriteLine("© Zyrio 20" + GetCopyrightYear() + ". Licensed under MIT.");
+            Console.WriteLine("© Zyrio 20" + GetCopyrightYear() + ". Licensed under MIT." + Environment.NewLine);
 
             Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.WriteLine("===" + Environment.NewLine);
