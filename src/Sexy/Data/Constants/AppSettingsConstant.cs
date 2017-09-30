@@ -1,7 +1,7 @@
 
 namespace Sexy.Data.Constants
 {
-    public class AppSettings
+    public class AppSettingsConstant
     {
         public static string FilenameLength { get; set; }
         public static string InstanceName { get; set; }

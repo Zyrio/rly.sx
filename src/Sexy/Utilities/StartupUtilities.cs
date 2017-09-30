@@ -1,29 +1,37 @@
 using System;
+using Sexy.Data.Constants;
 
 namespace Sexy.Utilities
 {
     public class StartupUtilities
     {
-        public static string GetCopyrightYear(string Release)
+        public static string GetCopyrightYear()
         {
-            return Release.Substring(0, 2);
+            return VersionConstant.Release.ToString().Substring(0, 2);
         }
 
         public static string GetRelease()
         {
             string FullVersion = "";
 
-            if(Version.Patch == 0) {
-                FullVersion = Version.Release.ToString();
-            } else {
-                FullVersion = Version.Release.ToString()
-                    + "." + Version.Patch.ToString();
-            }
-
-            if (String.IsNullOrEmpty(Version.Codename)) {
+            if(Sexy.Data.Constants.VersionConstant.Unstable) {
+                FullVersion = "dev." + Sexy.Data.Constants.VersionConstant.Patch.ToString() 
+                            + " (" + VersionConstant.Release.ToString()
+                            + "." + VersionConstant.Patch.ToString() + ")";
                 return FullVersion;
             } else {
-                return FullVersion + " '" + Version.Codename + "'";
+                    if(VersionConstant.Patch == 0) {
+                        FullVersion = VersionConstant.Release.ToString();
+                    } else {
+                        FullVersion = VersionConstant.Release.ToString()
+                            + "." + VersionConstant.Patch.ToString();
+                    }
+
+                    if (String.IsNullOrEmpty(VersionConstant.Codename)) {
+                        return FullVersion;
+                    } else {
+                        return FullVersion + " '" + VersionConstant.Codename + "'";
+                    }
             }
         }
 
@@ -49,13 +57,6 @@ namespace Sexy.Utilities
 
             Console.ForegroundColor = LogoColor;
            
-
-
-
-
-
-
-
             Console.WriteLine(@" ____                  ");
             Console.WriteLine(@"/ ___|  _____  ___   _ ");
             Console.WriteLine(@"\___ \ / _ \ \/ | | | |");
@@ -70,8 +71,7 @@ namespace Sexy.Utilities
 
             Console.WriteLine("Release " + Release + Environment.NewLine);
 
-            Console.WriteLine("© Zyrio 20" + GetCopyrightYear(Release) + ". All rights reserved.");
-            Console.WriteLine("Do not redistribute this code." + Environment.NewLine);
+            Console.WriteLine("© Zyrio 20" + GetCopyrightYear() + ". Licensed under MIT.");
 
             Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.WriteLine("===" + Environment.NewLine);

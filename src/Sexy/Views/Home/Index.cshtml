@@ -6,7 +6,7 @@
 
 <html>
 <head>
-    <title>@Sexy.Data.Constants.AppSettings.InstanceName</title>
+    <title>@Sexy.Data.Constants.AppSettingsConstant.InstanceName</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,8 +30,8 @@
 
             <div id="upload-result">
                 @if(!String.IsNullOrEmpty(@Model.Filename)) {
-                    var link = @Sexy.Data.Constants.AppSettings.InstanceProtocol + ":" +
-                        @Sexy.Data.Constants.AppSettings.UploadStorageEndpoint +
+                    var link = @Sexy.Data.Constants.AppSettingsConstant.InstanceProtocol + ":" +
+                        @Sexy.Data.Constants.AppSettingsConstant.UploadStorageEndpoint +
                         @Model.Filename;
                     
                     <text>

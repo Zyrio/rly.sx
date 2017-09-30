@@ -39,9 +39,9 @@ namespace Sexy.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(ICollection<IFormFile> files)
         {
-            var uploads = Sexy.Data.Constants.AppSettings.UploadStoragePath;
-            var filenameLength = Convert.ToInt32(Sexy.Data.Constants.AppSettings.FilenameLength);
-            var maxFilesize = Convert.ToInt32(Sexy.Data.Constants.AppSettings.MaxFilesize);
+            var uploads = Sexy.Data.Constants.AppSettingsConstant.UploadStoragePath;
+            var filenameLength = Convert.ToInt32(Sexy.Data.Constants.AppSettingsConstant.FilenameLength);
+            var maxFilesize = Convert.ToInt32(Sexy.Data.Constants.AppSettingsConstant.MaxFilesize);
 
             var randomString = GenerationUtilities.GenerateRandomString(filenameLength, false);
 
