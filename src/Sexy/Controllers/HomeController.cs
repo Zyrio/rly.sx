@@ -52,7 +52,11 @@ namespace Sexy.Controllers
                 if (file.Length > 0)
                 {
                     if(file.Length < maxFilesize) {
-                        newFile = randomString + Path.GetExtension(file.FileName);
+                        try {
+                            newFile = randomString + Path.GetExtension(file.FileName);
+                        } catch {
+                            newFile = randomString + "bin";
+                        }
 
                         using (var fileStream = new FileStream(
                             Path.Combine(uploads, newFile), FileMode.Create)
