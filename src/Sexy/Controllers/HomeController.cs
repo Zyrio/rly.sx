@@ -52,9 +52,9 @@ namespace Sexy.Controllers
                 if (file.Length > 0)
                 {
                     if(file.Length < maxFilesize) {
-                        try {
+                        if(String.IsNullOrEmpty(Path.GetExtension(file.FileName))) {
                             newFile = randomString + Path.GetExtension(file.FileName);
-                        } catch {
+                        } else {
                             newFile = randomString + ".bin";
                         }
 
