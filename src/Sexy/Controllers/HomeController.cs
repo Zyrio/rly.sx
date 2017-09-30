@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Sexy.Data;
+using Sexy.Data.Constants;
 using Sexy.Data.Repositories.Interfaces;
 using Sexy.Models.HomeViewModels;
 using Sexy.Utilities;
@@ -53,9 +54,9 @@ namespace Sexy.Controllers
                 {
                     if(file.Length < maxFilesize) {
                         if(String.IsNullOrEmpty(Path.GetExtension(file.FileName))) {
-                            newFile = randomString + Path.GetExtension(file.FileName);
-                        } else {
                             newFile = randomString + ".bin";
+                        } else {
+                            newFile = randomString + Path.GetExtension(file.FileName);
                         }
 
                         using (var fileStream = new FileStream(
@@ -74,7 +75,7 @@ namespace Sexy.Controllers
                             fileType,
                             file.FileName,
                             DateTime.UtcNow,
-                            "rly.sx"
+                            AppSettingsConstant.InstanceName
                         );
                     }
                 }
