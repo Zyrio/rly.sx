@@ -55,7 +55,7 @@ namespace Sexy.Controllers
                         try {
                             newFile = randomString + Path.GetExtension(file.FileName);
                         } catch {
-                            newFile = randomString + "bin";
+                            newFile = randomString + ".bin";
                         }
 
                         using (var fileStream = new FileStream(
